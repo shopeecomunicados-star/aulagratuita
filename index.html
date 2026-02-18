@@ -12,61 +12,61 @@
 
 body {
     margin: 0;
-    font-family: 'Inter', sans-serif;
-    background:
-        radial-gradient(circle at top, rgba(59,130,246,0.15), transparent 40%),
-        linear-gradient(180deg, #020617 0%, #0f172a 100%);
+    background: linear-gradient(180deg, #0a0f1c 0%, #111827 100%);
     color: #e5e7eb;
+    font-family: 'Inter', sans-serif;
     text-align: center;
 }
 
 .container {
-    max-width: 780px;
+    max-width: 760px;
     margin: auto;
-    padding: 60px 22px;
+    padding: 48px 22px;
 }
-
-/* Badge */
 
 .badge {
     display: inline-block;
-    background: rgba(59,130,246,0.15);
-    border: 1px solid rgba(59,130,246,0.35);
-    padding: 7px 18px;
+    background: #1f2937;
+    padding: 6px 16px;
     border-radius: 999px;
     font-size: 12px;
     letter-spacing: 1px;
-    color: #93c5fd;
-    margin-bottom: 28px;
+    color: #9ca3af;
+    margin-bottom: 22px;
 }
 
-/* Títulos */
-
 h1 {
-    font-size: 40px;
+    font-size: 36px;
     font-weight: 700;
     color: #f9fafb;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
 }
 
 h2 {
-    font-size: 19px;
+    font-size: 18px;
     font-weight: 400;
     color: #9ca3af;
-    margin-bottom: 46px;
-    line-height: 1.7;
+    margin-bottom: 36px;
+    line-height: 1.6;
 }
 
-/* Vídeo premium */
+/* FRASE DE POSICIONAMENTO */
+
+.positioning {
+    font-size: 16px;
+    color: #cbd5e1;
+    margin-bottom: 38px;
+    line-height: 1.6;
+}
+
+/* Vídeo */
 
 .video-box {
-    background: rgba(2,6,23,0.85);
-    padding: 18px;
-    border-radius: 20px;
-    box-shadow:
-        0 40px 100px rgba(0,0,0,0.9),
-        0 0 0 1px rgba(255,255,255,0.05);
-    margin-bottom: 42px;
+    background: #020617;
+    padding: 16px;
+    border-radius: 18px;
+    box-shadow: 0 35px 80px rgba(0,0,0,0.7);
+    margin-bottom: 36px;
 }
 
 video {
@@ -78,69 +78,89 @@ video {
 
 .description {
     font-size: 18px;
-    line-height: 1.8;
+    line-height: 1.7;
     color: #d1d5db;
-    margin-bottom: 46px;
+    margin-bottom: 22px;
 }
 
-/* CTA ULTRA */
+/* Exclusividade */
+
+.exclusive {
+    font-size: 15px;
+    color: #9ca3af;
+    margin-bottom: 42px;
+}
+
+/* CTA */
 
 .cta-button {
     display: inline-block;
-    background: linear-gradient(135deg, #22c55e, #4ade80);
+    background: #22c55e;
     color: white;
-    padding: 20px 46px;
-    font-size: 20px;
-    border-radius: 14px;
+    padding: 18px 40px;
+    font-size: 19px;
+    border-radius: 12px;
     text-decoration: none;
     font-weight: 600;
-    box-shadow:
-        0 18px 50px rgba(34,197,94,0.45),
-        0 0 0 1px rgba(255,255,255,0.08);
+    box-shadow: 0 12px 32px rgba(34,197,94,0.35);
     transition: all 0.25s ease;
 }
 
 .cta-button:hover {
-    transform: translateY(-3px);
-    box-shadow:
-        0 25px 70px rgba(34,197,94,0.6);
+    transform: translateY(-2px);
+    background: #16a34a;
 }
 
-/* Sobre */
+/* PROVA SOCIAL */
+
+.social-section {
+    margin-top: 60px;
+}
+
+.social-proof-box {
+    background: #020617;
+    border: 1px solid #1f2937;
+    padding: 18px;
+    border-radius: 14px;
+    margin-bottom: 14px;
+    font-size: 15px;
+    color: #cbd5e1;
+}
+
+/* SOBRE */
 
 .about {
     margin-top: 70px;
-    padding-top: 36px;
-    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 40px;
+    border-top: 1px solid #1f2937;
+}
+
+.about img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 18px;
+    border: 2px solid #1f2937;
 }
 
 .about h3 {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 600;
-    margin-bottom: 18px;
+    margin-bottom: 14px;
     color: #f3f4f6;
 }
 
 .about p {
-    font-size: 16.5px;
-    line-height: 1.8;
+    font-size: 16px;
+    line-height: 1.7;
     color: #9ca3af;
-    max-width: 640px;
+    max-width: 620px;
     margin: auto;
 }
 
-/* Prova social */
-
-.social-proof {
-    margin-top: 30px;
-    font-size: 14px;
-    color: #6b7280;
-}
-
-/* Rodapé */
-
 .footer {
-    margin-top: 70px;
+    margin-top: 60px;
     font-size: 13px;
     color: #6b7280;
 }
@@ -161,6 +181,10 @@ Sistema Renina-Angiotensina explicado com clareza,
 integração clínica e raciocínio fisiológico aplicado
 </h2>
 
+<p class="positioning">
+A aula que muitos estudantes só conseguem compreender plenamente após anos de prática clínica.
+</p>
+
 <div class="video-box">
 
 <video controls playsinline controlsList="nodownload" poster="capa.png">
@@ -175,25 +199,50 @@ Esta aula apresenta uma abordagem integrada da fisiologia,
 priorizando compreensão profunda em vez de memorização mecânica.
 </p>
 
+<p class="exclusive">
+Atendimento direto e individual pelo WhatsApp, com vagas limitadas para manter acompanhamento próximo.
+</p>
+
 <a class="cta-button"
 href="https://wa.me/5514991100738"
 target="_blank">
 Falar no WhatsApp sobre o curso completo
 </a>
 
+<!-- PROVA SOCIAL -->
+
+<div class="social-section">
+
+<div class="social-proof-box">
+“Finalmente entendi o SRAA sem precisar decorar fluxogramas enormes.”
+</div>
+
+<div class="social-proof-box">
+“Explicação muito mais clara do que a da própria aula da faculdade.”
+</div>
+
+<div class="social-proof-box">
+“Mudou completamente a forma como eu estudo fisiologia.”
+</div>
+
+<div class="social-proof-box">
+“Material ideal para revisar antes de provas e integrar com a clínica.”
+</div>
+
+</div>
+
+<!-- SOBRE -->
+
 <div class="about">
+
+<img src="autor.jpg" alt="Autor">
 
 <h3>Sobre o professor</h3>
 
 <p>
-Luiz é estudante de medicina e criador do projeto Estude Comigo,
-dedicado a tornar conteúdos complexos mais compreensíveis por meio
-de explicações claras, estruturadas e integradas à prática clínica.
+Luiz Fernando é estudante de medicina na UniFSP, residente em Avaré-SP e criador do projeto Estude Comigo, dedicado a transformar conteúdos complexos em raciocínio clínico compreensível desde os primeiros períodos da graduação.
+Seu método prioriza clareza, integração fisiológica e aplicação prática, reduzindo a dependência de memorização isolada.
 </p>
-
-<div class="social-proof">
-Conteúdo desenvolvido para estudantes de medicina de diferentes períodos da graduação
-</div>
 
 </div>
 
