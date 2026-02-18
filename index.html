@@ -12,11 +12,19 @@
 
 body{
     margin:0;
-    background:#0b1120;
-    color:#e5e7eb;
     font-family:'Inter',sans-serif;
-}
+    color:#e5e7eb;
 
+    /* IMAGEM DE FUNDO */
+    background:
+        linear-gradient(rgba(5,10,25,0.88), rgba(5,10,25,0.92)),
+        url("background.jpg");
+
+    background-size:cover;
+    background-position:center top;
+    background-attachment:fixed;
+    background-repeat:no-repeat;
+}
 .section{
     max-width:900px;
     margin:auto;
@@ -162,6 +170,17 @@ video{
     padding:40px 0;
 }
 
+.section{
+    max-width:900px;
+    margin:auto;
+    padding:80px 24px;
+
+    background:rgba(11,17,32,0.55);
+    backdrop-filter:blur(6px);
+    border-radius:18px;
+}
+
+    
 </style>
 </head>
 
