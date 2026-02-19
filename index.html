@@ -185,6 +185,48 @@ video{
     border-radius:18px;
 }
 
+
+    .modules{
+    margin-top:40px;
+}
+
+.module{
+    margin-bottom:16px;
+    border:1px solid #1f2937;
+    border-radius:12px;
+    overflow:hidden;
+    background:#0f172a;
+}
+
+.module-btn{
+    width:100%;
+    padding:20px;
+    background:none;
+    border:none;
+    color:#f9fafb;
+    font-size:18px;
+    font-weight:600;
+    text-align:left;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+.module-btn:hover{
+    background:#1e293b;
+}
+
+.module-content{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height 0.4s ease;
+    padding:0 20px;
+    color:#cbd5e1;
+}
+
+.module-content p{
+    margin:14px 0;
+}
+
     
 </style>
 </head>
@@ -200,7 +242,7 @@ video{
 <h1>Fisiologia que finalmente faz sentido</h1>
 
 <p class="subtitle">
-Sistema Renina-Angiotensina explicado com clareza conceitual,
+Sistema Renina-Angiotensina-Aldosterona explicado com clareza conceitual,
 integração clínica e raciocínio fisiológico aplicado.
 </p>
 
@@ -228,6 +270,73 @@ Atendimento individual pelo WhatsApp com número limitado de alunos.
 Falar sobre o curso completo
 </a>
 </div>
+
+    <!-- ESTRUTURA DO CURSO -->
+
+<div class="divider"></div>
+
+<h2 class="center">Estrutura do Curso</h2>
+
+<div class="modules">
+
+    <!-- MÓDULO 1 -->
+    <div class="module">
+        <button class="module-btn">MÓDULO 1 – Bases Celulares</button>
+        <div class="module-content">
+            <p>Aula 1.1 – Potencial de repouso</p>
+            <p>Aula 1.2 – Despolarização e repolarização</p>
+            <p>Aula 1.3 – Canais iônicos e farmacologia básica</p>
+            <p>Aula 1.4 – Aplicação clínica (hipercalemia e anestésicos)</p>
+            <p><strong>Aulas de 12–18 minutos cada.</strong></p>
+        </div>
+    </div>
+
+    <!-- MÓDULO 2 -->
+    <div class="module">
+        <button class="module-btn">MÓDULO 2 – Sistema Cardiovascular</button>
+        <div class="module-content">
+            <p>Aula 2.1 – Débito cardíaco explicado simples</p>
+            <p>Aula 2.2 – Resistência vascular e pressão arterial</p>
+            <p>Aula 2.3 – Regulação da pressão</p>
+            <p>Aula 2.4 – Caso clínico: choque e hipertensão</p>
+        </div>
+    </div>
+
+    <!-- MÓDULO 3 -->
+    <div class="module">
+        <button class="module-btn">MÓDULO 3 – Sistema Renal</button>
+        <div class="module-content">
+            <p>Aula 3.1 – Filtração glomerular</p>
+            <p>Aula 3.2 – Reabsorção e secreção</p>
+            <p>Aula 3.3 – Creatinina e TFG na prática</p>
+            <p>Aula 3.4 – Diuréticos e aplicação clínica</p>
+            <p><strong>Você já começa a se posicionar como alguém que entende renal.</strong></p>
+        </div>
+    </div>
+
+    <!-- MÓDULO 4 -->
+    <div class="module">
+        <button class="module-btn">MÓDULO 4 – Integração Cardiorrenal</button>
+        <div class="module-content">
+            <p>Aula 4.1 – Sistema Renina-Angiotensina-Aldosterona (SRAA)</p>
+            <p>Aula 4.2 – Controle de volume corporal</p>
+            <p>Aula 4.3 – Controle da pressão arterial a longo prazo</p>
+            <p>Aula 4.4 – Caso clínico integrador</p>
+        </div>
+    </div>
+
+</div>
+
+<div class="divider"></div>
+
+<p class="center">
+<strong>Estrutura Final Ideal</strong><br><br>
+• 4 módulos<br>
+• 3–4 aulas por módulo<br>
+• 15 minutos por aula<br>
+• Total ≈ 3 a 4 horas de curso
+</p>
+
 
 </section>
 
@@ -271,6 +380,27 @@ compreensível desde os primeiros períodos da graduação.
 <div class="footer">
 Estude Comigo — Aprender não precisa doer
 </div>
+
+
+
+    <script>
+const buttons = document.querySelectorAll(".module-btn");
+
+buttons.forEach(button => {
+    button.addEventListener("click", () => {
+        const content = button.nextElementSibling;
+
+        if(content.style.maxHeight){
+            content.style.maxHeight = null;
+            content.style.padding = "0 20px";
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+            content.style.padding = "20px";
+        }
+    });
+});
+</script>
+
 
 </body>
 </html>
