@@ -505,27 +505,44 @@ buttons.forEach(button => {
 
 
 
+
 const track = document.querySelector('.carousel-track');
 const slides = document.querySelectorAll('.testimonial-card');
 const nextBtn = document.querySelector('.arrow.right');
 const prevBtn = document.querySelector('.arrow.left');
 
 let index = 0;
+let slideWidth = slides[0].clientWidth;
 
 function updateCarousel(){
-    track.style.transform = `translateX(-${index * 100}%)`;
+    track.style.transform = `translateX(-${index * slideWidth}px)`;
+}
+
+function updateWidth(){
+    slideWidth = slides[0].clientWidth;
+    updateCarousel();
 }
 
 nextBtn.addEventListener('click', () => {
-    index = (index + 1) % slides.length;
+    if(index < slides.length - 1){
+        index++;
+    } else {
+        index = 0; // volta pro início corretamente
+    }
     updateCarousel();
 });
 
 prevBtn.addEventListener('click', () => {
-    index = (index - 1 + slides.length) % slides.length;
+    if(index > 0){
+        index--;
+    } else {
+        index = slides.length - 1; // volta pro último corretamente
+    }
     updateCarousel();
 });
-</script>
+
+window.addEventListener('resize', updateWidth);
+
 
 
     
