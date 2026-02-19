@@ -222,6 +222,84 @@ video{
     padding:40px 0;
 }
 
+/* CARROSSEL */
+
+.carousel{
+    position:relative;
+    overflow:hidden;
+    margin-top:40px;
+}
+
+.carousel-track{
+    display:flex;
+    transition:transform 0.5s ease;
+}
+
+.testimonial-card{
+    min-width:100%;
+    text-align:center;
+    padding:40px 20px;
+}
+
+.profile{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:15px;
+    border:3px solid #22c55e;
+}
+
+.testimonial-card h4{
+    margin:10px 0 6px 0;
+    font-weight:600;
+}
+
+.stars{
+    color:#facc15;
+    font-size:20px;
+    margin-bottom:12px;
+    letter-spacing:3px;
+}
+
+.testimonial-card p{
+    color:#cbd5e1;
+    font-size:17px;
+    max-width:600px;
+    margin:auto;
+    line-height:1.7;
+}
+
+/* SETAS */
+
+.arrow{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:#111827;
+    border:none;
+    color:white;
+    font-size:28px;
+    padding:10px 15px;
+    cursor:pointer;
+    border-radius:50%;
+    transition:0.2s;
+}
+
+.arrow:hover{
+    background:#22c55e;
+}
+
+.arrow.left{
+    left:10px;
+}
+
+.arrow.right{
+    right:10px;
+}
+
+
+    
 </style>
 </head>
 
@@ -326,12 +404,68 @@ Falar sobre o curso completo
 </section>
 
 <section class="section testimonials">
-<h2 class="center">Relatos de estudantes</h2>
-<div class="testimonial">“Finalmente entendi o SRAA sem decorar.”</div>
-<div class="testimonial">“Explicação mais clara que a da faculdade.”</div>
-<div class="testimonial">“Mudou completamente minha forma de estudar.”</div>
-<div class="testimonial">“Ideal para integrar teoria com prática clínica.”</div>
+
+<h2 class="center">O que os alunos estão dizendo</h2>
+
+<div class="carousel">
+
+<button class="arrow left">&#10094;</button>
+
+<div class="carousel-track">
+
+<div class="testimonial-card">
+<img src="perfil1.jpg" class="profile">
+<h4>Mariana L.</h4>
+<div class="stars">★★★★★</div>
+<p>
+“Eu finalmente entendi fisiologia de verdade. O módulo de integração cardiorrenal mudou completamente minha visão clínica.”
+</p>
+</div>
+
+<div class="testimonial-card">
+<img src="perfil2.jpg" class="profile">
+<h4>Gabriel S.</h4>
+<div class="stars">★★★★★</div>
+<p>
+“A melhor explicação de SRAA que já vi. Muito mais claro que a faculdade. Didática absurda.”
+</p>
+</div>
+
+<div class="testimonial-card">
+<img src="perfil3.jpg" class="profile">
+<h4>Ana Beatriz M.</h4>
+<div class="stars">★★★★★</div>
+<p>
+“Curso direto ao ponto, sem enrolação. Passei a entender renal como raciocínio, não como decoreba.”
+</p>
+</div>
+
+<div class="testimonial-card">
+<img src="perfil4.jpg" class="profile">
+<h4>Lucas R.</h4>
+<div class="stars">★★★★★</div>
+<p>
+“Me ajudou demais para provas e principalmente para discutir casos clínicos. Recomendo muito.”
+</p>
+</div>
+
+<div class="testimonial-card">
+<img src="perfil5.jpg" class="profile">
+<h4>Camila T.</h4>
+<div class="stars">★★★★★</div>
+<p>
+“Vale cada minuto. Organização impecável e explicações extremamente claras.”
+</p>
+</div>
+
+</div>
+
+<button class="arrow right">&#10095;</button>
+
+</div>
+
 </section>
+
 
 <section class="section">
 <div class="about">
@@ -368,6 +502,33 @@ buttons.forEach(button => {
         }
     });
 });
+
+
+<script>
+const track = document.querySelector('.carousel-track');
+const slides = document.querySelectorAll('.testimonial-card');
+const nextBtn = document.querySelector('.arrow.right');
+const prevBtn = document.querySelector('.arrow.left');
+
+let index = 0;
+
+function updateCarousel(){
+    track.style.transform = `translateX(-${index * 100}%)`;
+}
+
+nextBtn.addEventListener('click', () => {
+    index = (index + 1) % slides.length;
+    updateCarousel();
+});
+
+prevBtn.addEventListener('click', () => {
+    index = (index - 1 + slides.length) % slides.length;
+    updateCarousel();
+});
+</script>
+
+
+    
 </script>
 
 </body>
